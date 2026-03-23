@@ -1,19 +1,18 @@
 import 'package:crafy_bay/app/app_colors.dart';
-import 'package:crafy_bay/features/auth/presentation/screens/sign_in_screen.dart';
 import 'package:crafy_bay/features/auth/presentation/widgets/app_logo.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
-class SignUpScreen extends StatefulWidget {
-  const SignUpScreen({super.key});
+class SignInScreen extends StatefulWidget {
+  const SignInScreen({super.key});
 
-  static const String name = '/sign-up';
+  static const String name = '/sign-in';
 
   @override
-  State<SignUpScreen> createState() => _SignUpScreenState();
+  State<SignInScreen> createState() => _SignInScreenState();
 }
 
-class _SignUpScreenState extends State<SignUpScreen> {
+class _SignInScreenState extends State<SignInScreen> {
   @override
   Widget build(BuildContext context) {
     final textTheme = TextTheme.of(context);
@@ -29,38 +28,17 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 Center(child: AppLogo(width: 90)),
                 const SizedBox(height: 8),
                 Text(
-                  'Sign Up',
+                  'Sign In',
                   style: textTheme.headlineMedium?.copyWith(
                     fontWeight: FontWeight.bold,
                   ),
                 ),
                 Text(
-                  'Get started with your details',
+                  'Login to your account with email and password',
+                  textAlign: TextAlign.center,
                   style: textTheme.bodyLarge,
                 ),
                 SizedBox(height: 16),
-
-                TextFormField(
-                  textInputAction: TextInputAction.next,
-                  decoration: InputDecoration(hintText: 'First name'),
-                  validator: (String? value) {
-                    if (value?.trim().isEmpty ?? true) {
-                      return 'Enter your first name';
-                    }
-                    return null;
-                  },
-                ),
-
-                TextFormField(
-                  textInputAction: TextInputAction.next,
-                  decoration: InputDecoration(hintText: 'Last name'),
-                  validator: (String? value) {
-                    if (value?.trim().isEmpty ?? true) {
-                      return 'Enter your last name';
-                    }
-                    return null;
-                  },
-                ),
 
                 TextFormField(
                   textInputAction: TextInputAction.next,
@@ -76,6 +54,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 ),
 
                 TextFormField(
+                  obscureText: true,
+                  obscuringCharacter: '*',
                   textInputAction: TextInputAction.next,
                   decoration: InputDecoration(hintText: 'Password'),
                   validator: (String? value) {
@@ -86,49 +66,25 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   },
                 ),
 
-                TextFormField(
-                  keyboardType: TextInputType.number,
-                  textInputAction: TextInputAction.next,
-                  decoration: InputDecoration(hintText: 'Phone'),
-                  validator: (String? value) {
-                    if (value?.trim().isEmpty ?? true) {
-                      return 'Enter your phone';
-                    }
-                    return null;
-                  },
-                ),
-
-                TextFormField(
-                  textInputAction: TextInputAction.next,
-
-                  decoration: InputDecoration(hintText: 'City'),
-                  validator: (String? value) {
-                    if (value?.trim().isEmpty ?? true) {
-                      return 'Enter your city';
-                    }
-                    return null;
-                  },
-                ),
-
                 FilledButton(
-                  onPressed: _onTapSingUpButton,
-                  child: Text("Sign Up"),
+                  onPressed: _onTapSignInButton,
+                  child: Text("Sign In"),
                 ),
 
                 const SizedBox(height: 8),
                 RichText(
                   text: TextSpan(
                     style: textTheme.bodyMedium,
-                    text: 'Already have an account? ',
+                    text: 'Need an account?',
                     children: [
                       TextSpan(
                         style: TextStyle(
                           color: AppColors.themeColor,
                           fontWeight: FontWeight.bold,
                         ),
-                        text: 'Sign In',
+                        text: 'Sign Up',
                         recognizer: TapGestureRecognizer()
-                          ..onTap = _onTapSignInButton,
+                          ..onTap = _onTapSingUpButton,
                       ),
                     ],
                   ),
@@ -141,9 +97,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
     );
   }
 
-  void _onTapSingUpButton() {}
-
-  void _onTapSignInButton() {
-    Navigator.pushNamed(context, SignInScreen.name);
+  void _onTapSingUpButton() {
+    Navigator.pop(context);
   }
+
+  void _onTapSignInButton() {}
 }
