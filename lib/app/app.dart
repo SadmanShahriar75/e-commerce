@@ -2,6 +2,7 @@ import 'package:crafy_bay/app/app_routes.dart';
 import 'package:crafy_bay/app/app_theme.dart';
 import 'package:crafy_bay/app/providers/language_provider.dart';
 import 'package:crafy_bay/features/auth/presentation/screens/splash_screen.dart';
+import 'package:crafy_bay/features/common/presentation/providers/main_nav_container_provider.dart';
 import 'package:crafy_bay/l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -13,7 +14,13 @@ class CraftyBayApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
-      providers: [ChangeNotifierProvider(create: (_) => LanguageProvider())],
+      providers: [
+        ChangeNotifierProvider(create: (_) => LanguageProvider()),
+
+        ChangeNotifierProvider(create: (_) => MainNavContainerProvider()),
+      ],
+
+      //
       child: Consumer<LanguageProvider>(
         builder: (context, languageProvider, child) {
           return MaterialApp(

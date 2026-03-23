@@ -35,6 +35,7 @@ class _VerifyOtpScreenState extends State<VerifyOtpScreen> {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
+
                 Text(
                   'A 4 digits Otp has been sent to your email address',
                   textAlign: TextAlign.center,
