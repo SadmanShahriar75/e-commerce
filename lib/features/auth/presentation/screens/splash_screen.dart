@@ -1,7 +1,6 @@
-import 'package:crafy_bay/app/asset_paths.dart';
 import 'package:crafy_bay/features/auth/presentation/screens/sign_up_screen.dart';
+import 'package:crafy_bay/features/auth/presentation/widgets/app_logo.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -37,7 +36,7 @@ class _SplashScreenState extends State<SplashScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Spacer(),
-            SvgPicture.asset(AssetPaths.logoSvg, width: 100),
+            AppLogo(),
             Spacer(),
             CircularProgressIndicator(),
             SizedBox(height: 16),

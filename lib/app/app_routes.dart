@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 class AppRoutes {
   static Route<dynamic> rountes(RouteSettings settings) {
-    late Widget widget;
+    Widget widget = SizedBox();
     if (settings.name == SplashScreen.name) {
       widget = SplashScreen();
     } else if (settings.name == SignUpScreen.name) {
