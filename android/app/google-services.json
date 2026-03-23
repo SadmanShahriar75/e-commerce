@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1027060155144",
+    "project_id": "craftybay-4ba76",
+    "storage_bucket": "craftybay-4ba76.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1027060155144:android:331c6e28db31ee3cbea2bd",
+        "android_client_info": {
+          "package_name": "com.example.crafy_bay"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPrHQapL1Oj-S2tVNeLyNNbQ8vceu83jw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
