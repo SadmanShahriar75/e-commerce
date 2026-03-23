@@ -66,6 +66,16 @@ class _SignInScreenState extends State<SignInScreen> {
                   },
                 ),
 
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    TextButton(
+                      onPressed: _onTapForgetPassword,
+                      child: Text("Forgot Password?"),
+                    ),
+                  ],
+                ),
+
                 FilledButton(
                   onPressed: _onTapSignInButton,
                   child: Text("Sign In"),
@@ -95,6 +105,10 @@ class _SignInScreenState extends State<SignInScreen> {
         ),
       ),
     );
+  }
+
+  void _onTapForgetPassword() {
+    Navigator.pop(context);
   }
 
   void _onTapSingUpButton() {
