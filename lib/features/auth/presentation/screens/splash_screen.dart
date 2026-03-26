@@ -1,4 +1,3 @@
-import 'package:crafy_bay/features/auth/presentation/screens/sign_up_screen.dart';
 import 'package:crafy_bay/features/auth/presentation/widgets/app_logo.dart';
 import 'package:crafy_bay/features/common/presentation/screens/main_nav_holder_screen.dart';
 import 'package:flutter/material.dart';

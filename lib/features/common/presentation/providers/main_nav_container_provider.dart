@@ -10,4 +10,12 @@ class MainNavContainerProvider extends ChangeNotifier {
     _seletedIndex = index;
     notifyListeners();
   }
+
+  void chnageToCategories() {
+    changeItem(1);
+  }
+
+  void backToHome() {
+    changeItem(0);
+  }
 }
