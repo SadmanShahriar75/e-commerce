@@ -35,8 +35,29 @@ class HomeScreen extends StatelessWidget {
 
               _buildCategoryList(),
 
+              // popular
               SectionHeader(
                 title: 'Popular',
+                onTapSeeAll: () {
+                  context.read<MainNavContainerProvider>().chnageToCategories();
+                },
+              ),
+
+              _buildPopularProductList(),
+
+              // special
+              SectionHeader(
+                title: 'Special',
+                onTapSeeAll: () {
+                  context.read<MainNavContainerProvider>().chnageToCategories();
+                },
+              ),
+
+              _buildPopularProductList(),
+
+              // new
+              SectionHeader(
+                title: 'New',
                 onTapSeeAll: () {
                   context.read<MainNavContainerProvider>().chnageToCategories();
                 },
