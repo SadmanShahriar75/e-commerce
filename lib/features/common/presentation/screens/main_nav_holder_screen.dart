@@ -1,4 +1,5 @@
 import 'package:crafy_bay/app/app_colors.dart';
+import 'package:crafy_bay/features/cart/presentation/screens/cart_list_screen.dart';
 import 'package:crafy_bay/features/category/presentation/screens/category_list_screen.dart';
 import 'package:crafy_bay/features/common/presentation/providers/main_nav_container_provider.dart';
 import 'package:crafy_bay/features/home/presentation/screens/home_screen.dart';
@@ -19,7 +20,7 @@ class _MainNavHolderScreenState extends State<MainNavHolderScreen> {
   final List<Widget> _screen = [
     HomeScreen(),
     CategoryListScreen(),
-    HomeScreen(),
+    CartListScreen(),
     WishListScreen(),
   ];
   @override
