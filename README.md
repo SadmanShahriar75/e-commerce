@@ -1,6 +1,8 @@
 📦 Crafty Bay - E-Commerce App
 
-🚀 Features
+🚀 Features =>
+
+
 🛍️ Product List
 📄 Product Details
 🛒 Add to Cart
@@ -8,18 +10,23 @@
 🔐 User Login / Signup
 📦 Order Summary (optional)
 
-Screens
+Screens =>  
+
+
 Home Screen
 Product Details Screen
 Cart Screen
 Wishlist Screen
 Login / Signup Screen
 
-🛠️ Technologies Used
+🛠️ Technologies Used =>
+
+
 Flutter
 Dart
 REST API 
 Provider (state management)
 
 🎯 Purpose
+
 This project is built for learning purpose and to practice Flutter development and app architecture.
