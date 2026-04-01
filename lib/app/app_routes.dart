@@ -3,6 +3,7 @@ import 'package:crafy_bay/features/auth/presentation/screens/sign_up_screen.dart
 import 'package:crafy_bay/features/auth/presentation/screens/splash_screen.dart';
 import 'package:crafy_bay/features/auth/presentation/screens/verify_otp_screen.dart';
 import 'package:crafy_bay/features/common/presentation/screens/main_nav_holder_screen.dart';
+import 'package:crafy_bay/features/product/presentaion/screens/product_details_screen.dart';
 import 'package:crafy_bay/features/product/presentaion/screens/product_list_by_category_screens.dart';
 import 'package:crafy_bay/features/wish_list/presentation/screens/wish_list_screen.dart';
 import 'package:flutter/material.dart';
@@ -24,6 +25,8 @@ class AppRoutes {
       widget = ProductListByCategoryScreens();
     } else if (settings.name == WishListScreen.name) {
       widget = WishListScreen();
+    } else if (settings.name == ProductDetailsScreen.name) {
+      widget = ProductDetailsScreen();
     }
     return MaterialPageRoute(builder: (ctx) => widget);
   }

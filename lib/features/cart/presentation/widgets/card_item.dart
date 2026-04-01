@@ -1,7 +1,7 @@
 import 'package:crafy_bay/app/app_colors.dart';
 import 'package:crafy_bay/app/asset_paths.dart';
 import 'package:crafy_bay/app/constants.dart';
-import 'package:crafy_bay/features/cart/presentation/screens/inc_dec_button.dart';
+import 'package:crafy_bay/features/cart/presentation/widgets/inc_dec_button.dart';
 import 'package:flutter/material.dart';
 
 class CardItem extends StatelessWidget {

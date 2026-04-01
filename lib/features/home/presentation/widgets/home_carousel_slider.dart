@@ -34,7 +34,7 @@ class _HomeCarouselSliderState extends State<HomeCarouselSlider> {
                   margin: EdgeInsets.symmetric(horizontal: 5.0),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(8),
-                    color: const Color.fromARGB(255, 231, 231, 231),
+                    color: Colors.grey.withAlpha(50),
                   ),
                   child: Stack(
                     children: [

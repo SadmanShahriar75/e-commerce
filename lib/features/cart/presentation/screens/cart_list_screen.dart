@@ -55,7 +55,7 @@ class _CartListScreenState extends State<CartListScreen> {
             children: [
               Text("Total Prize", style: textTheme.bodyLarge),
               Text(
-                "${Constants.takaSign}242",
+                "${Constants.takaSign}500",
                 style: textTheme.titleLarge?.copyWith(
                   fontWeight: FontWeight.w600,
                   color: AppColors.themeColor,
