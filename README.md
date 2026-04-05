@@ -1,16 +1,32 @@
-# crafy_bay
+📦 Crafty Bay - E-Commerce App
 
-A new Flutter project.
+🚀 Features =>
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+🛍️ Product List
+📄 Product Details
+🛒 Add to Cart
+❤️ Wishlist
+🔐 User Login / Signup
+📦 Order Summary (optional)
 
-A few resources to get you started if this is your first Flutter project:
+Screens =>  
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Home Screen
+Product Details Screen
+Cart Screen
+Wishlist Screen
+Login / Signup Screen
+
+🛠️ Technologies Used =>
+
+
+Flutter
+Dart
+REST API 
+Provider (state management)
+
+🎯 Purpose
+
+This project is built for learning purpose and to practice Flutter development and app architecture.
