@@ -5,6 +5,7 @@ import 'package:crafy_bay/features/auth/presentation/screens/sign_in_screen.dart
 import 'package:crafy_bay/features/auth/presentation/screens/verify_otp_screen.dart';
 import 'package:crafy_bay/features/auth/presentation/widgets/app_logo.dart';
 import 'package:crafy_bay/features/common/presentation/widgets/center_circular_progress.dart';
+import 'package:crafy_bay/features/common/presentation/widgets/show_snackbar_msg.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -198,12 +199,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
       Navigator.pushNamed(
         context,
         VerifyOtpScreen.name,
-        // arguments: _emailTEController.text.trim(),
+        arguments: _emailTEController.text.trim(),
       );
     } else {
-      ScaffoldMessenger.of(
-        context,
-      ).showSnackBar(SnackBar(content: Text(_signUpProvider.errorMessage!)));
+      showSnackBarMessage(context, _signUpProvider.errorMessage!);
     }
   }
 
