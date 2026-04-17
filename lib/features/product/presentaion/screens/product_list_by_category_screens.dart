@@ -27,7 +27,7 @@ class _ProductListByCategoryScreensState
             mainAxisSpacing: 8,
           ),
           itemBuilder: (context, index) {
-            return FittedBox(child: CategoryCard());
+            // return FittedBox(child: CategoryCard());
           },
         ),
       ),

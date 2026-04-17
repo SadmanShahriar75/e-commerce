@@ -3,4 +3,7 @@ class Urls {
   static const String signUpUrl = "$_baseUrl/auth/signup";
   static const String verifyOtpUrl = '$_baseUrl/auth/verify-otp';
   static const String signInUrl = "$_baseUrl/auth/login";
+  static const String sliderUrl = "$_baseUrl/slides";
+  static String categoryListUrl(int pageSize, int pageNO) =>
+      "$_baseUrl/categories?count=$pageSize&page=$pageNO";
 }

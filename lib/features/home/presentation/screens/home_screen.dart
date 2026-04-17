@@ -94,7 +94,7 @@ class HomeScreen extends StatelessWidget {
         separatorBuilder: (context, index) => SizedBox(height: 12),
 
         itemBuilder: (context, index) {
-          return CategoryCard();
+          // return CategoryCard();
         },
       ),
     );
