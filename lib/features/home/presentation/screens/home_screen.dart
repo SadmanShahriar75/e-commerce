@@ -1,6 +1,8 @@
 import 'package:crafy_bay/app/asset_paths.dart';
+import 'package:crafy_bay/features/category/presentation/providers/category_list_provider.dart';
 import 'package:crafy_bay/features/common/presentation/providers/main_nav_container_provider.dart';
 import 'package:crafy_bay/features/common/presentation/widgets/category_card.dart';
+import 'package:crafy_bay/features/common/presentation/widgets/center_circular_progress.dart';
 import 'package:crafy_bay/features/common/presentation/widgets/product_card.dart';
 import 'package:crafy_bay/features/home/presentation/widgets/circle_icon_button.dart';
 import 'package:crafy_bay/features/home/presentation/widgets/home_carousel_slider.dart';
@@ -87,14 +89,24 @@ class HomeScreen extends StatelessWidget {
   SizedBox _buildCategoryList() {
     return SizedBox(
       height: 95,
-      child: ListView.separated(
-        scrollDirection: Axis.horizontal,
-        itemCount: 10,
+      child: Consumer<CategoryListProvider>(
+        builder: (context, categoryListProvider, _) {
+          if (categoryListProvider.intailLoading) {
+            return CenterCircularProgress();
+          }
+          return ListView.separated(
+            scrollDirection: Axis.horizontal,
+            itemCount: categoryListProvider.categoryList.length > 10
+                ? 10
+                : categoryListProvider.categoryList.length,
+            separatorBuilder: (context, index) => SizedBox(height: 12),
 
-        separatorBuilder: (context, index) => SizedBox(height: 12),
-
-        itemBuilder: (context, index) {
-          // return CategoryCard();
+            itemBuilder: (context, index) {
+              return CategoryCard(
+                categoryListModel: categoryListProvider.categoryList[index],
+              );
+            },
+          );
         },
       ),
     );
